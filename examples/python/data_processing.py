@@ -87,7 +87,7 @@ class DataProcessor:
         Args:
             data: List of dictionaries to process
         """
-        self.data = data
+        self.data = [item.copy() for item in data]
         self.processed = False
     
     def transform(self, key: str, transformation: Callable[[Any], Any]) -> 'DataProcessor':

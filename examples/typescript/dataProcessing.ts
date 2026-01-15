@@ -9,10 +9,10 @@ import { promises as fs } from 'fs';
 import * as path from 'path';
 
 /**
- * Interface for data items
+ * Interface for data items with flexible property types
  */
-interface DataItem {
-  [key: string]: string | number | boolean | null | undefined | DataItem | DataItem[];
+interface DataItem extends Record<string, unknown> {
+  // Add specific known properties here if needed
 }
 
 /**

@@ -5,6 +5,9 @@
  * defined in .github/copilot-instructions.md
  */
 
+const fs = require('fs').promises;
+const path = require('path');
+
 /**
  * Read and parse a JSON file
  * @param {string} filePath - Path to the JSON file
@@ -12,8 +15,6 @@
  * @throws {Error} If file cannot be read or parsed
  */
 const readJSONFile = async (filePath) => {
-  const fs = require('fs').promises;
-  
   try {
     const data = await fs.readFile(filePath, 'utf-8');
     return JSON.parse(data);
@@ -30,9 +31,6 @@ const readJSONFile = async (filePath) => {
  * @returns {Promise<void>}
  */
 const writeJSONFile = async (filePath, data, indent = 2) => {
-  const fs = require('fs').promises;
-  const path = require('path');
-  
   const dirPath = path.dirname(filePath);
   await fs.mkdir(dirPath, { recursive: true });
   

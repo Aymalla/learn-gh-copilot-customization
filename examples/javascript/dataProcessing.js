@@ -60,9 +60,11 @@ class DataProcessor {
   /**
    * Create a DataProcessor
    * @param {Array<object>} data - Array of objects to process
+   * @note Creates shallow copies to prevent top-level mutations.
+   *       For deep cloning, consider using structuredClone() or a deep copy library.
    */
   constructor(data) {
-    this.data = [...data]; // Create a copy
+    this.data = [...data]; // Shallow copy of array
     this.processed = false;
   }
 

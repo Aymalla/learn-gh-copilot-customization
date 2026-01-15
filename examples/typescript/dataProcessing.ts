@@ -135,7 +135,7 @@ export class DataProcessor<T extends DataItem> {
 /**
  * Person interface for demonstration
  */
-interface Person {
+interface Person extends DataItem {
   name: string;
   age: number;
   city: string;

@@ -86,6 +86,10 @@ class DataProcessor:
         
         Args:
             data: List of dictionaries to process
+        
+        Note:
+            Creates shallow copies of dictionaries to prevent top-level mutations.
+            For nested objects, consider using copy.deepcopy() if needed.
         """
         self.data = [item.copy() for item in data]
         self.processed = False

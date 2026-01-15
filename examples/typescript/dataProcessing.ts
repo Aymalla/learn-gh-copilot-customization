@@ -78,9 +78,11 @@ export class DataProcessor<T extends DataItem> {
   /**
    * Create a DataProcessor
    * @param data - Array of objects to process
+   * @note Creates shallow copies to prevent top-level mutations.
+   *       Objects within the array remain referenced. For deep cloning, use structuredClone().
    */
   constructor(data: T[]) {
-    this.data = [...data]; // Create a copy
+    this.data = [...data]; // Shallow copy of array
     this.processed = false;
   }
 

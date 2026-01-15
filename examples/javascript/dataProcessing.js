@@ -103,6 +103,14 @@ class DataProcessor {
   getResults() {
     return this.data;
   }
+
+  /**
+   * Check if data has been processed
+   * @returns {boolean} True if processed, false otherwise
+   */
+  isProcessed() {
+    return this.processed;
+  }
 }
 
 /**

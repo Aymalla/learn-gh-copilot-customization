@@ -8,6 +8,33 @@ Get started with GitHub Copilot customizations in just 5 minutes!
 - GitHub account with Copilot access
 - Basic familiarity with VS Code
 
+## Two Ways to Get Started
+
+### 🐳 Option A: Using Dev Container (Easiest)
+
+**Prerequisites:**
+- [Docker](https://www.docker.com/get-started) installed
+- [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) for VS Code
+
+**Steps:**
+
+1. **Clone and open:**
+   ```bash
+   git clone https://github.com/Aymalla/learn-gh-copilot-customization.git
+   cd learn-gh-copilot-customization
+   code .
+   ```
+
+2. **Reopen in container:**
+   - Click "Reopen in Container" when prompted
+   - Or: `Ctrl+Shift+P` → "Dev Containers: Reopen in Container"
+
+3. **Wait for setup to complete** (first time only, ~2-3 minutes)
+
+4. **You're ready!** All extensions and tools are pre-installed.
+
+### 💻 Option B: Local Setup
+
 ## Step 1: Clone This Repository
 
 ```bash

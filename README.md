@@ -110,6 +110,31 @@ The `.vscode/extensions.json` file recommends extensions that work well with Cop
 
 ## 🚀 Getting Started
 
+### Option 1: Using Dev Container (Recommended)
+
+The easiest way to get started is using the included dev container:
+
+1. **Prerequisites:**
+   - [Docker](https://www.docker.com/get-started) installed
+   - [VS Code](https://code.visualstudio.com/) with [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+2. **Open in container:**
+   ```bash
+   git clone https://github.com/Aymalla/learn-gh-copilot-customization.git
+   cd learn-gh-copilot-customization
+   code .
+   ```
+   - Click "Reopen in Container" when prompted
+   - Or use: `Ctrl+Shift+P` → "Dev Containers: Reopen in Container"
+
+3. **What's included:**
+   - Pre-configured environment with Python 3.11 and Node.js LTS
+   - All recommended extensions automatically installed
+   - GitHub Copilot configured and ready to use
+   - Code formatters (Black, Prettier, ESLint) pre-installed
+
+### Option 2: Local Setup
+
 1. **Clone this repository:**
    ```bash
    git clone https://github.com/Aymalla/learn-gh-copilot-customization.git

@@ -1,0 +1,40 @@
+{
+  "name": "GitHub Copilot Customization Demo",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.copilot",
+        "github.copilot-chat",
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "github.copilot.enable": {
+          "*": true
+        },
+        "editor.inlineSuggest.enabled": true,
+        "github.copilot.editor.enableAutoCompletions": true
+      }
+    }
+  },
+
+  "postCreateCommand": "npm install -g prettier eslint && pip install black",
+
+  "remoteUser": "codespace"
+}

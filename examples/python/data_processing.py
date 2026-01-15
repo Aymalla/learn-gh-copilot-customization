@@ -6,7 +6,7 @@ defined in .github/copilot-instructions.md
 """
 
 from pathlib import Path
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Callable
 import json
 
 
@@ -52,7 +52,7 @@ def write_json_file(file_path: str, data: Dict[str, Any], indent: int = 2) -> No
         json.dump(data, file, indent=indent, ensure_ascii=False)
 
 
-def filter_list_by_condition(items: List[Any], condition: callable) -> List[Any]:
+def filter_list_by_condition(items: List[Any], condition: Callable[[Any], bool]) -> List[Any]:
     """
     Filter a list based on a condition function.
 
@@ -90,7 +90,7 @@ class DataProcessor:
         self.data = data
         self.processed = False
     
-    def transform(self, key: str, transformation: callable) -> 'DataProcessor':
+    def transform(self, key: str, transformation: Callable[[Any], Any]) -> 'DataProcessor':
         """
         Apply a transformation to a specific key in all data items.
         

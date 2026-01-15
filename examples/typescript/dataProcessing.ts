@@ -12,7 +12,7 @@ import * as path from 'path';
  * Interface for data items
  */
 interface DataItem {
-  [key: string]: any;
+  [key: string]: string | number | boolean | null | undefined | DataItem | DataItem[];
 }
 
 /**

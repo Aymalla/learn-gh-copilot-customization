@@ -21,7 +21,7 @@ interface DataItem {
  * @returns Parsed JSON data
  * @throws Error if file cannot be read or parsed
  */
-export const readJSONFile = async <T = any>(filePath: string): Promise<T> => {
+export const readJSONFile = async <T = unknown>(filePath: string): Promise<T> => {
   try {
     const data = await fs.readFile(filePath, 'utf-8');
     return JSON.parse(data) as T;
@@ -38,7 +38,7 @@ export const readJSONFile = async <T = any>(filePath: string): Promise<T> => {
  */
 export const writeJSONFile = async (
   filePath: string,
-  data: any,
+  data: Record<string, unknown>,
   indent: number = 2
 ): Promise<void> => {
   const dirPath = path.dirname(filePath);

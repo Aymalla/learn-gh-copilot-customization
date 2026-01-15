@@ -1,0 +1,66 @@
+{
+  // GitHub Copilot Settings Customization Examples
+  
+  // Enable/Disable Copilot
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+
+  // Inline Suggestions Settings
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.editor.enableCodeActions": true,
+  
+  // Advanced Settings
+  "github.copilot.advanced": {
+    "debug.overrideEngine": "",
+    "debug.testOverrideProxyUrl": "",
+    "debug.overrideProxyUrl": "",
+    "debug.filterLogCategories": []
+  },
+
+  // Chat Settings
+  "github.copilot.chat.localeOverride": "en",
+  "github.copilot.chat.welcomeMessage": "default",
+  "github.copilot.chat.useProjectTemplates": true,
+
+  // Editor Integration
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.showToolbar": "onHover",
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.wordBasedSuggestions": "matchingDocuments",
+
+  // Language-Specific Settings
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "github.copilot.enable": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "github.copilot.enable": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "github.copilot.enable": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "github.copilot.enable": true
+  },
+
+  // Files to exclude from Copilot context
+  "github.copilot.chat.codeGeneration.instructions": [],
+  
+  // Terminal Integration
+  "terminal.integrated.suggest.enabled": true,
+  "github.copilot.renameSuggestions.triggerAutomatically": true
+}
